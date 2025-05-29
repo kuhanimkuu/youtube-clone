@@ -7,7 +7,7 @@ import moment from 'moment'
 function Feed({category}) {
     const [data, setData] = useState([]);
     const fetchData = async () =>{
-        const videoList_URL =`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=100&regionCode=Ke&videoCategoryId=${category}&key=${API_KEY}`
+        const videoList_URL =`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=250&regionCode=Ke&videoCategoryId=${category}&key=${API_KEY}`
         await fetch(videoList_URL)
         .then(response=>response.json()).then(data=>setData(data.items))
         .catch((error)=>console.log(error));
