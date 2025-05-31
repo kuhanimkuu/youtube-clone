@@ -52,7 +52,7 @@
 .publisher div p{
     color:#000;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom:6px;
 }
 .publisher div span{
@@ -73,12 +73,12 @@
     margin: 15px 0;   
 }
 .vid-description p{
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 5px;
     color: #5a5a5a;
 }
 .vid-description h4{
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 15px;
     color: #5a5a5a;
 }
@@ -93,11 +93,11 @@
     margin-right: 15px;
 }
 .comments h3{
-    font-size: 14px;
+    font-size: 10px;
     margin-bottom: 2px;
 }
 .comments h3 span{
-    font-size: 12px;
+    font-size: 10px;
     color: #5a5a5a;
     font-weight: 500;
     margin-left: 8px;

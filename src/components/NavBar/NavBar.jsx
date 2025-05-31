@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './NavBar.css'
 import menu_icon from '../../assets/menu.png'
 import logo from '../../assets/logo.png'
@@ -9,6 +9,18 @@ import notification_icon from '../../assets/notification.png'
 import profile_icon from '../../assets/jack.png'
 import { Link } from 'react-router-dom'
 function NavBar({setSidebar}) {
+  const fetchData = async () =>{
+        const videoList_URL =`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=Ke&videoCategoryId=${category}&key=${API_KEY}`
+        await fetch(videoList_URL)
+        .then(response=>response.json()).then(data=>setData(data.items))
+        .catch((error)=>console.log(error));
+     
+      }
+      useEffect(()=>{
+        fetchData()
+      },[])
+
+
   return (
     <nav className='flex-div'>
       <div className="nav-left flex-div">
@@ -21,7 +33,7 @@ function NavBar({setSidebar}) {
       <div className="nav-middle flex-div">
         <div className="search-box flex-div">
           <input type='text' placeholder='Search'/>
-        <img src={search_icon} alt=''/>
+        <img src={search_icon} alt='' onClick={()=>{}}/>
         </div>
         
       </div>
